@@ -13,4 +13,13 @@ export class ToDoDataService {
     this.todos.push(new ToDo('Geschenke kaufen', true, '14.12.2022'));
   }
 
+  saveToDo(toDo : ToDo) {
+    this.todos.push(toDo);
+  }
+
+  toggleToDo(toDo : ToDo){
+    toDo.done = !toDo.done;
+    this.todos = this.todos.filter(t => t = t);
+  }
+
 }
