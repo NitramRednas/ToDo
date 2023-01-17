@@ -1,4 +1,4 @@
-toDoDone {
-  text-decoration: line-through 
-  color: green
+.toDoDone {
+  text-decoration: line-through; 
+  color: green;
 }

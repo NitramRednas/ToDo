@@ -9,17 +9,18 @@ import { ToDoDataService } from '../../services/to-do-data.service';
 })
 export class ToDoListComponent implements OnInit {
 
+  toDo :ToDo;
+
   constructor(private ToDoDataService : ToDoDataService) { }
 
   ngOnInit() {
   }
 
-  get todos(): ToDo[] {
-    return this.ToDoDataService.todos;
+  get toDos(): ToDo[] {
+    return this.ToDoDataService.toDos;
   }
 
   toggle(toDo : ToDo){
-    return this.ToDoDataService.todos;
+    this.ToDoDataService.toggleToDo(toDo);
   }
-
 }
